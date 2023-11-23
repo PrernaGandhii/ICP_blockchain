@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "ICP_blockchain_backend": {
+      "main": "src/ICP_blockchain_backend/main.mo",
+      "type": "motoko"
+    },
+    "ICP_blockchain_frontend": {
+      "dependencies": [
+        "ICP_blockchain_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/ICP_blockchain_frontend/src/index.html"
+      },
+      "source": [
+        "src/ICP_blockchain_frontend/assets",
+        "dist/ICP_blockchain_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
